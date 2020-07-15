@@ -22,7 +22,12 @@ systemctl start mariadb
 
 mysql -e "create database opencart"
 
-mysql opencart < opencart.sql 
+cd /tmp/
+git clone https://github.com/tcooksd/ntierapp.git
+
+cd ./ntierapp
+
+mysql opencart < opencart.sql
 
 
 #php  cli_install.php install --username admin --email "<%= customOptions.tcontier01 %>" \

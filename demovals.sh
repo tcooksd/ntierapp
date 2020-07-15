@@ -9,3 +9,14 @@ echo "########################################"
 
 echo "running demo.sh command"
 ./demo.sh
+
+cd /tmp/
+git clone https://github.com/tcooksd/ntierapp.git
+
+cd ./ntierapp
+
+yum install mariadb-server -y
+systemctl start mariadb
+
+mysql -e "create database opencart"
+mysql opencart < opencart.sql

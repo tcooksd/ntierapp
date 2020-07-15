@@ -17,17 +17,17 @@ mv /var/www/html/system/storage /var/www/
 chmod 777 /var/www/storage
 chmod 777 /var/www/html/*
 
-yum install mariadb-server -y
-systemctl start mariadb
+#yum install mariadb-server -y
+#systemctl start mariadb
 
-mysql -e "create database opencart"
+#mysql -e "create database opencart"
 
 cd /tmp/
 git clone https://github.com/tcooksd/ntierapp.git
 
 cd ./ntierapp
 
-mysql opencart < opencart.sql
+mysql -u root --password=p1ckl3 -h 10.30.21.1 opencart < opencart.sql
 
 
 #php  cli_install.php install --username admin --email "<%= customOptions.tcontier01 %>" \

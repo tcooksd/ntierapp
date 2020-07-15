@@ -1,4 +1,4 @@
-yum update -y
+#yum update -y
 
 yum install epel-release yum-utils -y
 yum install httpd -y

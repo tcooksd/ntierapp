@@ -15,7 +15,10 @@ cp -R upload/* /var/www/html/
 mv /var/www/html/system/storage /var/www/
 
 chmod 777 /var/www/storage
+chmod 777 /var/www/storage/*
 chmod 777 /var/www/html/*
+
+systemctl restart httpd
 
 #yum install mariadb-server -y
 #systemctl start mariadb

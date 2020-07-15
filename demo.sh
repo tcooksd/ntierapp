@@ -27,7 +27,11 @@ git clone https://github.com/tcooksd/ntierapp.git
 
 cd ./ntierapp
 
+yum install mariadb -y
+mysql -u root --password=p1ckl3 -h 10.30.21.1 -e "create database opencart"
 mysql -u root --password=p1ckl3 -h 10.30.21.1 opencart < opencart.sql
+
+yum remove mariadb -y
 
 
 #php  cli_install.php install --username admin --email "<%= customOptions.tcontier01 %>" \

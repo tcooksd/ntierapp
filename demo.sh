@@ -20,6 +20,11 @@ chmod 777 /var/www/html/*
 
 systemctl restart httpd
 
+chmod 777 /var/www/storage
+chmod 777 /var/www/storage/*
+chmod 777 /var/www/html/*
+
+
 #yum install mariadb-server -y
 #systemctl start mariadb
 

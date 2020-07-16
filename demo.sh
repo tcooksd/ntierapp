@@ -20,6 +20,8 @@ chmod 777 /var/www/html/*
 
 systemctl restart httpd
 
+curl localhost
+
 chmod 777 /var/www/storage
 chmod 777 /var/www/storage/*
 chmod 777 /var/www/html/*

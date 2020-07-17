@@ -7,22 +7,6 @@ yum-config-manager --enable remi-php73
 
 yum install php php-common php-opcache php-mcrypt php-cli php-gd php-curl php-mysqlnd php73-php-pecl-zip -y
 
-cd /tmp/
-git clone https://github.com/opencart/opencart.git
-cd /tmp/opencart/
-cp -R upload/* /var/www/html/
-
-mv /var/www/html/system/storage /var/www/
-
-chmod -R 777 /var/www/storage
-chmod -R 777 /var/www/storage/*
-chmod -R 777 /var/www/html/*
-
-systemctl restart httpd
-
-
-
-
 #yum install mariadb-server -y
 #systemctl start mariadb
 
@@ -39,6 +23,19 @@ mysql -u root --password="<%=customOptions.tcontier02%>" -h "<%=evars.MYSQL_IP%>
 
 yum remove mariadb -y
 
+
+cd /tmp/
+git clone https://github.com/opencart/opencart.git
+cd /tmp/opencart/
+cp -R upload/* /var/www/html/
+
+mv /var/www/html/system/storage /var/www/
+
+chmod -R 777 /var/www/storage
+chmod -R 777 /var/www/storage/*
+chmod -R 777 /var/www/html/*
+
+systemctl restart httpd
 
 #php  cli_install.php install --username admin --email "<%= customOptions.tcontier01 %>" \
 # --password "<%= customOptions.tcontier02 %>" --http_server http://localhost/opencart/ \

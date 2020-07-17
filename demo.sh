@@ -20,11 +20,7 @@ chmod -R 777 /var/www/html/*
 
 systemctl restart httpd
 
-#curl localhost
 
-#chmod 777 /var/www/storage
-#chmod 777 /var/www/storage/*
-#chmod 777 /var/www/html/*
 
 
 #yum install mariadb-server -y
@@ -32,16 +28,16 @@ systemctl restart httpd
 
 #mysql -e "create database opencart"
 
-#cd /tmp/
-#git clone https://github.com/tcooksd/ntierapp.git
+cd /tmp/
+git clone https://github.com/tcooksd/ntierapp.git
 
-#cd ./ntierapp
+cd ./ntierapp
 
-#yum install mariadb -y
-#mysql -u root --password=p1ckl3 -h 10.30.21.1 -e "create database opencart"
-#mysql -u root --password=p1ckl3 -h 10.30.21.1 opencart < opencart.sql
+yum install mariadb -y
+mysql -u root --password="<%=customOptions.tcontier02%>" -h "<%=evars.MYSQL_IP%>" -e "create database opencart"
+mysql -u root --password="<%=customOptions.tcontier02%>" -h "<%=evars.MYSQL_IP%>" opencart < opencart.sql
 
-#yum remove mariadb -y
+yum remove mariadb -y
 
 
 #php  cli_install.php install --username admin --email "<%= customOptions.tcontier01 %>" \

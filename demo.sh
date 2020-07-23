@@ -25,8 +25,8 @@ yum remove mariadb -y
 
 
 cd /tmp/
-git clone https://github.com/opencart/opencart.git
-cd /tmp/opencart/
+git clone https://github.com/tcooksd/opencart-test.git
+cd /tmp/opencart-test/
 cp -R upload/* /var/www/html/
 
 mv /var/www/html/system/storage /var/www/

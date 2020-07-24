@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 echo "test" > /tmp/out
 #yum update -y
 

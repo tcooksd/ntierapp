@@ -16,8 +16,8 @@ git clone https://github.com/tcooksd/ntierapp.git
 cd ./ntierapp
 
 yum install mariadb -y
-mysql -u root --password="<%=customOptions.tcontier02%>" -h "<%=evars.MYSQL_IP%>" -e "create database opencart"
-mysql -u root --password="<%=customOptions.tcontier02%>" -h "<%=evars.MYSQL_IP%>" opencart < opencart.sql
+mysql -u root --password="<%= customOptions.tcontier02 %>" -h 10.30.20.240 -e "create database opencart"
+mysql -u root --password="<%= customOptions.tcontier02 %>" -h 10.30.20.240 opencart < opencart.sql
 
 yum remove mariadb -y
 

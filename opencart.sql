@@ -3558,7 +3558,7 @@ CREATE TABLE `oc_user` (
 
 LOCK TABLES `oc_user` WRITE;
 /*!40000 ALTER TABLE `oc_user` DISABLE KEYS */;
-INSERT INTO `oc_user` VALUES (1,1,'admin','$2y$10$vo51AuRuanYiXlNxIS322e23pWvB8M5u8eILbSswuGklvXO9E2Miq','','John','Doe','tcook@morpheusdata.com','','','10.30.19.145',1,'2020-07-14 13:49:32');
+INSERT INTO `oc_user` VALUES (1,1,'admin','5f4dcc3b5aa765d61d8327deb882cf99','','John','Doe','tcook@morpheusdata.com','','','10.30.19.145',1,'2020-07-14 13:49:32');
 /*!40000 ALTER TABLE `oc_user` ENABLE KEYS */;
 UNLOCK TABLES;
 

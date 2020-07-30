@@ -7,8 +7,7 @@ echo "########################################"
 ls
 echo "########################################"
 
-echo "running demo.sh command"
-./demo.sh
+
 
 cd /tmp/
 git clone https://github.com/tcooksd/ntierapp.git
